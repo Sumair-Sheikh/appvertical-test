@@ -6,7 +6,7 @@ function WhyChoose(props) {
   const counterList = [
     {
       end: "14",
-      text: "Years of proven success in the industry",
+      text: "Years of proven success in the industr",
     },
     {
       end: "50",
