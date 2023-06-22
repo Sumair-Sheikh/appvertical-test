@@ -1,0 +1,70 @@
+.leading-sec {
+  position: relative;
+  padding: 60px 0;
+  &::before {
+    content: "";
+    position: absolute;
+    background-image: url(../../../public/images/preloader-el-02.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 280px;
+    height: 550px;
+    z-index: 0;
+    right: 0;
+    bottom: 40px;
+    transform: rotate(180deg);
+  }
+  .row1 {
+    .heading {
+      width: fit-content;
+      margin: 0 auto;
+      h3 {
+        font-family: "Red Hat Display", sans-serif;
+        font-weight: 500;
+        font-size: 30px;
+        letter-spacing: -0.02em;
+        line-height: 38px;
+        text-align: center;
+        color: #fff;
+      }
+      h2 {
+        font-family: "Red Hat Display", sans-serif;
+        font-weight: bold;
+        font-size: 70px;
+        letter-spacing: -0.04em;
+        line-height: 88px;
+        text-align: center;
+        color: #fff;
+        position: relative;
+        margin: 0 auto;
+        z-index: 1;
+        &::before {
+          content: "";
+          position: absolute;
+          background-image: url(../../../public/images/Path-450.png);
+          background-repeat: no-repeat;
+          background-size: contain;
+          width: 86px;
+          height: 149px;
+          top: -20px;
+          left: 0px;
+          z-index: -1;
+        }
+      }
+    }
+    .content {
+      font-family: "Red Hat Display", sans-serif;
+      font-weight: 500;
+      font-size: 23px;
+      letter-spacing: -0.02em;
+      line-height: 40px;
+      text-align: center;
+      color: #fff;
+      width: 70%;
+      margin: 0 auto;
+    }
+  }
+  .row2 {
+    padding: 100px 0 50px;
+  }
+}
