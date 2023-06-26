@@ -1,4 +1,5 @@
 import React, { Fragment } from "react";
+import Slider from "react-slick";
 import Image from "next/image";
 import styles from "./Logos.module.scss";
 
@@ -48,7 +49,44 @@ function Logos(props) {
       height: "140",
       alt: "logo",
     },
+    {
+      src: "/images/logo-aj-1.png",
+      width: "170",
+      height: "140",
+      alt: "logo",
+    },
   ];
+
+  var settings = {
+    dots: false,
+    arrows: false,
+    infinite: true,
+    autoplay: true,
+    speed: 6000,
+    slidesToShow: 7,
+    slidesToScroll: 2,
+    responsive: [
+      {
+        breakpoint: 1025,
+        settings: {
+          dots: false,
+          arrows: false,
+          autoplay: true,
+          slidesToShow: 2,
+        },
+      },
+
+      {
+        breakpoint: 767,
+        settings: {
+          dots: false,
+          arrows: false,
+          autoplay: true,
+          slidesToShow: 1,
+        },
+      },
+    ],
+  };
 
   return (
     <Fragment>
@@ -61,19 +99,21 @@ function Logos(props) {
                   <h2>{props.heading}</h2>
                 </div>
                 <ul>
-                  {logoList.slice(0, 7).map((list, index) => {
-                    return (
-                      <li key={index}>
-                        <Image
-                          src={list.src}
-                          width={list.width}
-                          height={list.height}
-                          alt={list.alt}
-                          loading="lazy"
-                        ></Image>
-                      </li>
-                    );
-                  })}
+                  <Slider {...settings}>
+                    {logoList.map((list, index) => {
+                      return (
+                        <li key={index}>
+                          <Image
+                            src={list.src}
+                            width={list.width}
+                            height={list.height}
+                            alt={list.alt}
+                            loading="lazy"
+                          ></Image>
+                        </li>
+                      );
+                    })}
+                  </Slider>
                 </ul>
               </div>
             </div>
