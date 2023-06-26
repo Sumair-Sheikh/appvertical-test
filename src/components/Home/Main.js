@@ -8,16 +8,16 @@ import LeadingInnovative from "../LeadingInnovative";
 import WhyChoose from "../WhyChoose";
 
 function Main() {
+  const heading = () => (
+    <>
+      Invest In <span>Digital</span> <span>Transformation</span> With Confidence
+    </>
+  );
   return (
     <Fragment>
       <Banner
         subtitle="Award-winning Mobile App Development Agency"
-        title={[
-          <>
-            Invest In <span>Digital</span> <span>Transformation</span> With
-            Confidence
-          </>,
-        ]}
+        title={heading()}
         content="Our in-house team offers the best mobile app development
         services who will be able to create amazing mobile apps for
         your business."
